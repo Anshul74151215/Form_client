@@ -6,7 +6,7 @@ export default function FillForm() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const response = await fetch(
-      "https://periwinkle-whale-tux.cyclic.app/api/submitForm",
+      "https://form-server-0d7o.onrender.com/api/submitForm",
       {
         method: "POST",
         headers: {

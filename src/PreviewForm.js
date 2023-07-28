@@ -10,7 +10,7 @@ const PreviewForm = () => {
   const fetchFormData = async () => {
     try {
       const response = await fetch(
-        "https://periwinkle-whale-tux.cyclic.app/api/getFormData"
+        "https://form-server-0d7o.onrender.com/api/getFormData"
       );
       const data = await response.json();
       setFormData(data);
