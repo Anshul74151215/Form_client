@@ -9,7 +9,9 @@ const PreviewForm = () => {
 
   const fetchFormData = async () => {
     try {
-      const response = await fetch("http://localhost:5000/api/getFormData");
+      const response = await fetch(
+        "https://periwinkle-whale-tux.cyclic.app/api/getFormData"
+      );
       const data = await response.json();
       setFormData(data);
     } catch (error) {

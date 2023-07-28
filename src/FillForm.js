@@ -5,18 +5,21 @@ export default function FillForm() {
   let navigate = useNavigate();
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const response = await fetch("http://localhost:5000/api/submitForm", {
-      method: "POST",
-      headers: {
-        "content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        name: credentials.name,
-        email: credentials.email,
-        question: credentials.question,
-        response: credentials.response
-      }),
-    });
+    const response = await fetch(
+      "https://periwinkle-whale-tux.cyclic.app/api/submitForm",
+      {
+        method: "POST",
+        headers: {
+          "content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name: credentials.name,
+          email: credentials.email,
+          question: credentials.question,
+          response: credentials.response,
+        }),
+      }
+    );
     navigate("/");
     const json = await response.json();
     console.log(json);
